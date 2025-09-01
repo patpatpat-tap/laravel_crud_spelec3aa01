@@ -1,61 +1,33 @@
 @extends('layouts.app') 
 @section('content') 
-<div class="row justify-content-center mt-3"> 
-    <div class="col-md-8"> 
-<div class="card"> 
-<div class="card-header"> 
-<div class="float-start"> 
-Product Information 
-</div> 
-<div class="float-end"> 
-<a href="{{ route('products.index') }}" class="btn 
-btn-primary btn-sm">&larr; Back</a> 
-</div> 
-   </div> 
-<div class="card-body"> 
-<div class="row"> 
-<label for="code" class="col-md-4 col-form
-label text-md-end text-start"><strong>Code:</strong></label> 
-<div class="col-md-6" style="line-height: 
-35px;"> 
-{{ $product->code }} 
-</div> 
-</div> 
-<div class="row"> 
-<label for="name" class="col-md-4 col-form
-label text-md-end text-start"><strong>Name:</strong></label> 
-<div class="col-md-6" style="line-height: 
-35px;"> 
-{{ $product->name }} 
-</div> 
-</div> 
-<div class="row"> 
-<label for="quantity" class="col-md-4 col
-form-label text-md-end text-start"><strong>Quantity:</strong></label> 
-<div class="col-md-6" style="line-height: 
-35px;"> 
-{{ $product->quantity }} 
-</div> 
-</div> 
-<div class="row"> 
-<label for="price" class="col-md-4 col-form
-label text-md-end text-start"><strong>Price:</strong></label> 
-<div class="col-md-6" style="line-height: 
-35px;"> 
-{{ $product->price }} 
-</div> 
-</div> 
-<div class="row"> 
-<label for="description" class="col-md-4 col
-form-label text-md-end text
-start"><strong>Description:</strong></label> 
-<div class="col-md-6" style="line-height: 
-35px;"> 
-{{ $product->description }} 
-</div> 
-</div> 
-</div> 
-</div> 
+<div class="mx-auto max-w-2xl"> 
+    <div class="rounded-xl border border-slate-200 bg-white/80 shadow-sm"> 
+        <div class="flex items-center justify-between border-b border-slate-200 px-5 py-4"> 
+            <div class="font-semibold tracking-tight">Product Information</div> 
+            <a href="{{ route('products.index') }}" class="rounded-md bg-slate-100 px-3 py-1.5 text-sm font-medium text-slate-700 hover:bg-slate-200">&larr; Back</a> 
+        </div> 
+        <div class="px-5 py-5 space-y-4"> 
+            <div class="grid grid-cols-3 items-start gap-3">
+                <label class="text-sm font-medium text-slate-600">Code</label> 
+                <div class="col-span-2 text-slate-900">{{ $product->code }}</div> 
+            </div> 
+            <div class="grid grid-cols-3 items-start gap-3">
+                <label class="text-sm font-medium text-slate-600">Name</label> 
+                <div class="col-span-2 text-slate-900">{{ $product->name }}</div> 
+            </div> 
+            <div class="grid grid-cols-3 items-start gap-3">
+                <label class="text-sm font-medium text-slate-600">Quantity</label> 
+                <div class="col-span-2 text-slate-900">{{ $product->quantity }}</div> 
+            </div> 
+            <div class="grid grid-cols-3 items-start gap-3">
+                <label class="text-sm font-medium text-slate-600">Price</label> 
+                <div class="col-span-2 text-slate-900">{{ $product->price }}</div> 
+            </div> 
+            <div class="grid grid-cols-3 items-start gap-3">
+                <label class="text-sm font-medium text-slate-600">Description</label> 
+                <div class="col-span-2 text-slate-900">{{ $product->description }}</div> 
+            </div> 
+        </div> 
     </div>    
 </div> 
 @endsection 
